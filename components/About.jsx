@@ -21,101 +21,74 @@ export default function About() {
   }, [])
 
   return (
-    <section id="about" className="py-28 bg-white">
+    <section id="about" className="relative py-28 z-10">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Section Label */}
         <div className="flex items-center gap-3 mb-16">
-          <span
-            className="font-mono text-xs font-medium tracking-widest uppercase"
-            style={{ color: '#3B6FE8' }}
-          >
-            01 / About
-          </span>
-          <div className="h-px flex-1 max-w-[60px]" style={{ background: '#3B6FE8', opacity: 0.3 }} />
+          <span className="section-label">01 / About</span>
+          <div className="h-px flex-1 max-w-[60px] bg-gold/30" />
         </div>
 
         <div ref={ref} className="reveal grid md:grid-cols-2 gap-16 items-center">
-          {/* Photo */}
           <div className="relative">
-            {/* Decorative frame */}
-            <div
-              className="absolute -top-4 -left-4 w-full h-full rounded-2xl border-2"
-              style={{ borderColor: '#3B6FE8', opacity: 0.2 }}
-            />
-            {/* Profile image placeholder */}
-            <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200 shadow-lg">
-              {/* 
-                DROP YOUR PHOTO: Place your image file as /public/profile.jpg
-                Then uncomment the Image component below and remove the placeholder div
-              */}
-              {
+            <div className="absolute -top-4 -left-4 w-full h-full rounded-2xl border border-gold/25" />
+            <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden glass-panel">
               <Image
                 src="/profile.jpg"
                 alt="Tioluwanimi Ayomide Adeagbo"
                 fill
-                className="object-cover"
+                className="object-cover grayscale-[15%] contrast-110"
                 priority
               />
-              }
+              <div className="absolute inset-0 bg-gradient-to-t from-void/70 via-transparent to-transparent" />
             </div>
 
-            {/* Floating badge */}
-            <div
-              className="absolute -bottom-5 -right-5 bg-white rounded-xl px-5 py-3 shadow-lg border border-slate-100"
-            >
+            <div className="absolute -bottom-5 -right-5 glass-panel rounded-xl px-5 py-3 shadow-gold-sm">
               <div className="flex items-center gap-2.5">
-                <div
-                  className="w-2.5 h-2.5 rounded-full animate-pulse"
-                  style={{ background: '#22c55e' }}
-                />
-                <span className="font-body text-sm font-medium text-ink">Open to work</span>
+                <div className="w-2.5 h-2.5 rounded-full bg-gold animate-pulse-slow" />
+                <span className="font-body text-sm font-medium text-obsidian">Open to work</span>
               </div>
             </div>
           </div>
 
-          {/* Text Content */}
           <div>
-            <h2 className="font-display text-4xl lg:text-5xl text-ink mb-6 leading-tight">
-              Building systems that{' '}
-              <span style={{ color: '#3B6FE8' }}>think</span> and{' '}
-              <span style={{ color: '#3B6FE8' }}>scale.</span>
+            <h2 className="font-display text-4xl lg:text-5xl text-obsidian mb-6 leading-tight">
+              Building systems that <span className="text-gold-gradient">think</span> and{' '}
+              <span className="text-gold-gradient">scale.</span>
             </h2>
 
-            <div className="space-y-4 text-subtle font-body text-base leading-relaxed mb-8">
+            <div className="space-y-4 text-mist font-body text-base leading-relaxed mb-8">
               <p>
-                I'm <strong className="text-ink">Tioluwanimi Ayomide Adeagbo</strong>, a
-                backend-focused developer with strong experience in Python and JavaScript. I build
-                real-world applications, research tools, and automation systems.
+                I&rsquo;m <strong className="text-obsidian">Tioluwanimi Ayomide Adeagbo</strong>, a
+                Computer Science &amp; Engineering student at Obafemi Awolowo University and a
+                full-stack developer specializing in AI backend systems — multi-agent
+                orchestration, RAG pipelines, and financial intelligence infrastructure.
               </p>
               <p>
-                Currently, I'm developing my foundation in AI/ML with the goal of contributing to{' '}
-                <strong className="text-ink">large language models</strong> and intelligent systems.
-                I work with deployment tools like Render, Vercel, and Supabase, and I'm expanding my
-                cloud and infrastructure knowledge through Google Cloud.
+                I lead and ship technical projects end-to-end: from{' '}
+                <strong className="text-obsidian">FastAPI + LangGraph</strong> agentic backends to{' '}
+                <strong className="text-obsidian">Next.js</strong> and{' '}
+                <strong className="text-obsidian">React Native</strong> frontends, deployed on
+                Vercel, Render, and Google Cloud Run.
               </p>
               <p>
-                My approach: write clean, maintainable code, solve real problems, and keep building
-                toward the future of intelligent backend systems.
+                My long-term goal is to build a West African AI intelligence infrastructure
+                company — starting with proprietary Nigerian datasets across fintech, market
+                behavior, and language.
               </p>
             </div>
 
-            {/* Quick facts */}
             <div className="grid grid-cols-2 gap-4">
               {[
-                { label: 'Location', value: 'Nigeria' },
-                { label: 'Focus', value: 'Backend & AI/ML' },
-                { label: 'Main Language', value: 'Python' },
+                { label: 'Location', value: 'Ile-Ife, Nigeria' },
+                { label: 'Focus', value: 'AI Backend & Agentic Systems' },
+                { label: 'Core Stack', value: 'FastAPI · Next.js' },
                 { label: 'Status', value: 'Open to Work' },
               ].map((fact) => (
-                <div
-                  key={fact.label}
-                  className="p-4 rounded-xl"
-                  style={{ background: '#F7F8FC' }}
-                >
-                  <div className="font-mono text-xs text-subtle uppercase tracking-widest mb-1">
+                <div key={fact.label} className="p-4 rounded-xl glass-panel">
+                  <div className="font-mono text-[0.65rem] text-mist uppercase tracking-widest mb-1">
                     {fact.label}
                   </div>
-                  <div className="font-body text-sm font-semibold text-ink">{fact.value}</div>
+                  <div className="font-body text-sm font-semibold text-obsidian">{fact.value}</div>
                 </div>
               ))}
             </div>
