@@ -4,43 +4,43 @@ import { useEffect, useRef } from 'react'
 
 const learningItems = [
   {
-    title: 'AI / ML Engineering',
+    title: 'Agentic AI Architecture',
     description:
-      'Building my foundation in machine learning — from classical models to neural networks. Actively working on research tools and early-stage ML projects.',
+      'Deepening multi-agent orchestration with LangGraph — deterministic engines paired with LLM narration layers, not LLMs doing the arithmetic.',
     icon: '🧠',
     progress: 'Active',
-    tags: ['Scikit-learn', 'Pandas', 'NumPy', 'Jupyter'],
+    tags: ['LangGraph', 'StateGraph', 'Groq', 'OpenRouter'],
   },
   {
-    title: 'Large Language Models',
+    title: 'Financial Infrastructure Rails',
     description:
-      'Exploring how LLMs are built, fine-tuned, and deployed. My long-term goal is to contribute to the development of intelligent language systems.',
+      'Going deeper into payment rails and unified APIs — Ecobank, Nomba, Paystack, and Squad — with idempotent webhook handling and sub-ledger reconciliation.',
     icon: '⚡',
-    progress: 'Foundation',
-    tags: ['Transformers', 'Prompt Engineering', 'API Integration'],
+    progress: 'Active',
+    tags: ['Webhooks', 'HMAC', 'Ledger Design', 'Payouts'],
   },
   {
-    title: 'Cloud Infrastructure (AWS / Azure)',
+    title: 'West African Data Infrastructure',
     description:
-      'Expanding beyond Render and GCP into enterprise-grade cloud platforms. Learning about scalable infrastructure, managed services, and DevOps practices.',
+      'Building toward proprietary Nigerian datasets — market prices, student financial behavior, and Pidgin/Yoruba language corpora.',
+    icon: '🌍',
+    progress: 'Foundation',
+    tags: ['Data Pipelines', 'NLP', 'Yoruba Corpus'],
+  },
+  {
+    title: 'Cloud & Systems Design',
+    description:
+      'Scaling backend architecture beyond Render and Vercel — microservices, caching, and infrastructure that holds up under real traffic.',
     icon: '☁️',
     progress: 'Learning',
-    tags: ['AWS', 'Azure', 'Cloud Architecture', 'DevOps'],
-  },
-  {
-    title: 'Advanced Backend Architecture',
-    description:
-      'Going deeper into system design — microservices, message queues, caching strategies, and building backends that scale to millions of users.',
-    icon: '⚙️',
-    progress: 'Active',
-    tags: ['System Design', 'Microservices', 'Redis', 'PostgreSQL'],
+    tags: ['GCP', 'System Design', 'PostgreSQL'],
   },
 ]
 
-const progressColors = {
-  Active: { bg: '#F0FDF4', text: '#16a34a', dot: '#22c55e' },
-  Foundation: { bg: '#EEF2FD', text: '#3B6FE8', dot: '#3B6FE8' },
-  Learning: { bg: '#FFF7ED', text: '#ea580c', dot: '#f97316' },
+const progressStyles = {
+  Active: 'border-emerald-400/40 text-emerald-300',
+  Foundation: 'border-gold/40 text-gold',
+  Learning: 'border-orange-400/40 text-orange-300',
 }
 
 export default function Learning() {
@@ -61,82 +61,49 @@ export default function Learning() {
   }, [])
 
   return (
-    <section id="learning" className="py-28" style={{ background: '#F7F8FC' }}>
+    <section id="learning" className="relative py-28 z-10">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Section Label */}
         <div className="flex items-center gap-3 mb-4">
-          <span
-            className="font-mono text-xs font-medium tracking-widest uppercase"
-            style={{ color: '#3B6FE8' }}
-          >
-            04 / Currently Learning
-          </span>
-          <div className="h-px flex-1 max-w-[60px]" style={{ background: '#3B6FE8', opacity: 0.3 }} />
+          <span className="section-label">05 / Currently Learning</span>
+          <div className="h-px flex-1 max-w-[60px] bg-gold/30" />
         </div>
 
-        <h2 className="font-display text-4xl lg:text-5xl text-ink mb-4">
-          What I'm building toward
+        <h2 className="font-display text-4xl lg:text-5xl text-obsidian mb-4">
+          What I&rsquo;m building toward
         </h2>
-        <p className="font-body text-subtle text-base max-w-xl mb-16">
-          I believe in showing direction, not just current skills. Here's where I'm heading.
+        <p className="font-body text-mist text-base max-w-xl mb-16">
+          Direction matters as much as current skill. Here&rsquo;s where I&rsquo;m heading.
         </p>
 
         <div ref={ref} className="reveal grid md:grid-cols-2 gap-6">
-          {learningItems.map((item, i) => {
-            const colors = progressColors[item.progress]
-            return (
-              <div
-                key={item.title}
-                className="bg-white rounded-2xl p-8 border hover:shadow-md transition-shadow duration-300"
-                style={{ borderColor: '#E2E8F0' }}
-              >
-                {/* Icon + progress badge */}
-                <div className="flex items-center justify-between mb-5">
-                  <span className="text-3xl">{item.icon}</span>
-                  <span
-                    className="font-mono text-xs font-medium px-3 py-1 rounded-full flex items-center gap-1.5"
-                    style={{ background: colors.bg, color: colors.text }}
-                  >
-                    <span
-                      className="w-1.5 h-1.5 rounded-full"
-                      style={{ background: colors.dot }}
-                    />
-                    {item.progress}
-                  </span>
-                </div>
-
-                <h3 className="font-display text-xl text-ink mb-3">{item.title}</h3>
-                <p className="font-body text-sm text-subtle leading-relaxed mb-5">
-                  {item.description}
-                </p>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2">
-                  {item.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="font-mono text-xs px-2.5 py-1 rounded-md"
-                      style={{ background: '#F7F8FC', color: '#64748B' }}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+          {learningItems.map((item) => (
+            <div key={item.title} className="glass-panel rounded-2xl p-8 hover:shadow-gold-sm transition-shadow duration-300">
+              <div className="flex items-center justify-between mb-5">
+                <span className="text-3xl">{item.icon}</span>
+                <span className={`font-mono text-[0.65rem] px-3 py-1 rounded-full border ${progressStyles[item.progress]}`}>
+                  {item.progress}
+                </span>
               </div>
-            )
-          })}
+              <h3 className="font-display text-xl text-obsidian mb-3">{item.title}</h3>
+              <p className="font-body text-sm text-mist leading-relaxed mb-5">{item.description}</p>
+              <div className="flex flex-wrap gap-2">
+                {item.tags.map((tag) => (
+                  <span key={tag} className="font-mono text-[0.65rem] px-2.5 py-1 rounded-md bg-void-line/60 text-mist">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
 
-        {/* Quote / philosophy */}
-        <div
-          className="mt-12 rounded-2xl p-8 border-l-4 bg-white"
-          style={{ borderLeftColor: '#3B6FE8' }}
-        >
-          <p className="font-display text-xl text-ink leading-relaxed mb-3">
-            "I'm not just learning to use AI tools — I'm learning to build them."
+        <div className="mt-12 glass-panel rounded-2xl p-8 border-l-2 border-l-gold">
+          <p className="font-display text-xl text-obsidian leading-relaxed mb-3">
+            &ldquo;I&rsquo;m not just learning to use AI tools — I&rsquo;m learning to build the
+            infrastructure underneath them.&rdquo;
           </p>
-          <p className="font-body text-sm text-subtle">
-            The goal is LLM development and intelligent backend infrastructure.
+          <p className="font-body text-sm text-mist">
+            The long-term goal: West African AI intelligence infrastructure.
           </p>
         </div>
       </div>

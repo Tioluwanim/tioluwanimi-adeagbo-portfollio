@@ -61,30 +61,22 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-28 bg-white">
+    <section id="contact" className="relative py-28 z-10">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Section Label */}
         <div className="flex items-center gap-3 mb-4">
-          <span
-            className="font-mono text-xs font-medium tracking-widest uppercase"
-            style={{ color: '#3B6FE8' }}
-          >
-            05 / Contact
-          </span>
-          <div className="h-px flex-1 max-w-[60px]" style={{ background: '#3B6FE8', opacity: 0.3 }} />
+          <span className="section-label">07 / Contact</span>
+          <div className="h-px flex-1 max-w-[60px] bg-gold/30" />
         </div>
 
         <div ref={ref} className="reveal max-w-3xl">
-          <h2 className="font-display text-4xl lg:text-5xl text-ink mb-6 leading-tight">
-            Let's build something{' '}
-            <span style={{ color: '#3B6FE8' }}>great together.</span>
+          <h2 className="font-display text-4xl lg:text-5xl text-obsidian mb-6 leading-tight">
+            Let&rsquo;s build something <span className="text-gold-gradient">great together.</span>
           </h2>
-          <p className="font-body text-subtle text-base leading-relaxed mb-12 max-w-xl">
-            I'm open to backend engineering roles, AI/ML collaborations, freelance projects, and
-            interesting conversations. Don't hesitate to reach out.
+          <p className="font-body text-mist text-base leading-relaxed mb-12 max-w-xl">
+            Open to backend engineering roles, AI/agentic collaborations, and interesting
+            conversations. Reach out any time.
           </p>
 
-          {/* Contact cards */}
           <div className="grid sm:grid-cols-3 gap-4 mb-12">
             {contactLinks.map((link) => (
               <a
@@ -92,19 +84,17 @@ export default function Contact() {
                 href={link.href}
                 target={link.label !== 'Email' ? '_blank' : undefined}
                 rel="noopener noreferrer"
-                className="group flex flex-col gap-3 p-6 rounded-2xl border hover:border-[#3B6FE8] hover:shadow-md transition-all duration-300"
-                style={{ borderColor: '#E2E8F0' }}
+                data-cursor-hover
+                className="group flex flex-col gap-3 p-6 rounded-2xl glass-panel hover:shadow-gold-sm transition-all duration-300"
               >
-                <span
-                  className="text-subtle group-hover:text-[#3B6FE8] transition-colors duration-200"
-                >
+                <span className="text-mist group-hover:text-gold transition-colors duration-200">
                   {link.icon}
                 </span>
                 <div>
-                  <div className="font-mono text-xs text-subtle uppercase tracking-widest mb-1">
+                  <div className="font-mono text-[0.65rem] text-mist uppercase tracking-widest mb-1">
                     {link.label}
                   </div>
-                  <div className="font-body text-sm font-medium text-ink group-hover:text-[#3B6FE8] transition-colors duration-200 break-all">
+                  <div className="font-body text-sm font-medium text-obsidian group-hover:text-gold transition-colors duration-200 break-all">
                     {link.value}
                   </div>
                 </div>
@@ -112,40 +102,17 @@ export default function Contact() {
             ))}
           </div>
 
-          {/* Quick copy email CTA */}
-          <div
-            className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-6 rounded-2xl"
-            style={{ background: '#EEF2FD' }}
-          >
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-6 rounded-2xl glass-panel">
             <div>
-              <p className="font-body text-sm font-semibold text-ink mb-0.5">
-                Prefer a quick copy?
-              </p>
-              <p className="font-mono text-sm" style={{ color: '#3B6FE8' }}>
-                tolutemitiwa@gmail.com
-              </p>
+              <p className="font-body text-sm font-semibold text-obsidian mb-0.5">Prefer a quick copy?</p>
+              <p className="font-mono text-sm text-gold">tolutemitiwa@gmail.com</p>
             </div>
             <button
               onClick={handleCopyEmail}
-              className="inline-flex items-center gap-2 text-white text-sm font-medium px-5 py-2.5 rounded-full transition-all duration-200 shrink-0"
-              style={{ background: copied ? '#22c55e' : '#3B6FE8' }}
+              data-cursor-hover
+              className="inline-flex items-center gap-2 text-void text-sm font-medium px-5 py-2.5 rounded-full transition-all duration-200 shrink-0 bg-gold-gradient"
             >
-              {copied ? (
-                <>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-                    <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  Copied!
-                </>
-              ) : (
-                <>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-                    <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" strokeWidth="2" />
-                    <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                  </svg>
-                  Copy Email
-                </>
-              )}
+              {copied ? 'Copied!' : 'Copy Email'}
             </button>
           </div>
         </div>
