@@ -1,0 +1,203 @@
+{
+  "hero": {
+    "availability": "Available for opportunities",
+    "titleFirstLine": "Tioluwanimi",
+    "titleAccent": "Engineering Intelligence.",
+    "summary": "Full-stack developer and AI backend engineer building multi-agent systems, RAG pipelines, and production-grade fintech infrastructure out of Obafemi Awolowo University, Nigeria.",
+    "primaryCta": { "label": "Explore Featured Case Studies", "href": "#projects" },
+    "secondaryCta": { "label": "Start a Conversation", "href": "#contact" },
+    "proofLinks": [
+      { "label": "GitHub", "href": "https://github.com/Tioluwanim" },
+      { "label": "LinkedIn", "href": "https://www.linkedin.com/in/tioluwanimi-adeagbo-653920392/" }
+    ],
+    "proofStats": [
+      { "value": "10+", "label": "Products shipped" },
+      { "value": "4", "label": "Hackathons / pitchathons in 2026" },
+      { "value": "1.0", "label": "Hit Rate@10 (KudiWise AI)" }
+    ]
+  },
+  "projects": {
+    "featured": [
+      {
+        "id": "spoudazo",
+        "name": "Spoudazõ",
+        "tagline": "AI Exam-Prep & Academic Operating System",
+        "description": "A full-stack AI exam-prep platform built on Next.js and FastAPI — FAISS vector search over BGE-M3 embeddings, rubric-based theory grading, CBT practice mode, a study planner, and a Smart Library powered by Tavily web search. Deployed on Vercel with Firebase auth.",
+        "tech": ["Next.js", "FastAPI", "FAISS", "BGE-M3", "Firebase Auth"],
+        "type": "AI / EdTech",
+        "accent": "from-gold/20 to-transparent",
+        "image": "/projects/spoudazo.svg",
+        "links": {
+          "caseStudy": "#contact",
+          "demo": "#contact",
+          "github": "https://github.com/Tioluwanim"
+        }
+      },
+      {
+        "id": "zelta",
+        "name": "ZELTA",
+        "tagline": "AI Financial Twin for Nigerian Students",
+        "description": "A behavioral finance platform pivoting toward an AI Financial Twin for Nigerian university students — FastAPI microservices, Bayesian likelihood models, Kelly Criterion math for risk sizing, and an LLM narration layer (Llama via Groq/OpenRouter) that never does the arithmetic itself.",
+        "tech": ["FastAPI", "Bayesian Inference", "Kelly Criterion", "LangGraph", "Groq"],
+        "type": "AI / Fintech",
+        "accent": "from-emerald-400/20 to-transparent",
+        "image": "/projects/zelta.svg",
+        "links": {
+          "caseStudy": "#contact",
+          "demo": "#contact",
+          "github": "https://github.com/Tioluwanim"
+        }
+      },
+      {
+        "id": "ojabulk",
+        "name": "OjaBulk",
+        "tagline": "Pooled Procurement & Split-Ledger Escrow",
+        "description": "Pooled procurement infrastructure for Nigerian market traders — Nomba Virtual Accounts, HMAC-SHA256 webhook verification, a double-entry ledger, smart escrow mechanics, and USSD access via Africa’s Talking for traders without smartphones.",
+        "tech": ["FastAPI", "Nomba API", "Double-Entry Ledger", "USSD", "Escrow"],
+        "type": "Fintech / Infrastructure",
+        "accent": "from-violet-400/20 to-transparent",
+        "image": "/projects/ojabulk.svg",
+        "links": {
+          "caseStudy": "#contact",
+          "demo": "#contact",
+          "github": "https://github.com/Tioluwanim"
+        }
+      }
+    ],
+    "other": [
+      {
+        "id": 1,
+        "name": "PDF-RESEARCHER-ANALYSER",
+        "tagline": "Intelligent PDF Research Tool",
+        "description": "A multi-document research platform with Google Drive sync, FAISS retrieval, and a Streamlit interface for analyzing academic papers.",
+        "tech": ["Python", "FAISS", "NLP", "Streamlit"],
+        "type": "Research",
+        "githubLink": "https://github.com/Tioluwanim/PDF-RESEARCHER-ANALYSER",
+        "status": "Public"
+      },
+      {
+        "id": 2,
+        "name": "scholar_search_app",
+        "tagline": "Google Scholar Research Automation",
+        "description": "Searches multiple author names on Google Scholar and automatically downloads matching research papers, saving hours of manual searching.",
+        "tech": ["Python", "Web Scraping", "Automation"],
+        "type": "Automation",
+        "githubLink": "https://github.com/Tioluwanim/scholar_search_app",
+        "status": "Public"
+      },
+      {
+        "id": 3,
+        "name": "Fraud_Detection_Group4",
+        "tagline": "ML-Powered Fraud Detection",
+        "description": "A fraud detection project applying machine learning models to identify fraudulent patterns in financial transaction data.",
+        "tech": ["Jupyter", "scikit-learn", "Pandas"],
+        "type": "Machine Learning",
+        "githubLink": "https://github.com/Tioluwanim/Fraud_Detection_Group4_project",
+        "status": "Public"
+      },
+      {
+        "id": 4,
+        "name": "Oke-Osun-Diocesan-App",
+        "tagline": "Church Diocese Web + Mobile Platform",
+        "description": "Next.js website and React Native/Expo app for the Diocese of Oke-Osun — Paystack giving flow, OTP auth via Resend, and a FastAPI/PostgreSQL backend.",
+        "tech": ["Next.js", "React Native", "FastAPI", "Paystack"],
+        "type": "Real-World Client",
+        "githubLink": "https://github.com/Tioluwanim/Oke-Osun-Diocesan-Application",
+        "status": "Public"
+      },
+      {
+        "id": 5,
+        "name": "KudiWise AI",
+        "tagline": "Agentic LLM Support Assistant",
+        "description": "LangGraph + FastAPI + ChromaDB agent deployed to Google Cloud Run for the DSN × BCT LLM Agent Challenge — Hit Rate@10 of 1.0.",
+        "tech": ["LangGraph", "FastAPI", "ChromaDB", "Cloud Run"],
+        "type": "AI / Agents",
+        "githubLink": null,
+        "status": "Private"
+      }
+    ]
+  },
+  "skills": {
+    "groups": [
+      {
+        "category": "Languages",
+        "icon": "{ }",
+        "skills": [
+          { "name": "Python", "level": 92, "note": "Core" },
+          { "name": "TypeScript / JavaScript", "level": 80, "note": "" },
+          { "name": "SQL", "level": 75, "note": "" }
+        ]
+      },
+      {
+        "category": "AI & Agentic Systems",
+        "icon": "◈",
+        "skills": [
+          { "name": "LangGraph", "level": 88, "note": "" },
+          { "name": "RAG / Vector Search", "level": 85, "note": "FAISS · ChromaDB" },
+          { "name": "LLM Routing", "level": 80, "note": "Groq · OpenRouter" }
+        ]
+      },
+      {
+        "category": "Backend & Data",
+        "icon": "⚙",
+        "skills": [
+          { "name": "FastAPI", "level": 90, "note": "" },
+          { "name": "PostgreSQL / SQLAlchemy", "level": 85, "note": "" },
+          { "name": "Webhook & Ledger Systems", "level": 82, "note": "HMAC · Double-entry" }
+        ]
+      },
+      {
+        "category": "Frontend & Infra",
+        "icon": "☁",
+        "skills": [
+          { "name": "Next.js (App Router)", "level": 85, "note": "" },
+          { "name": "React Native / Expo", "level": 78, "note": "" },
+          { "name": "Cloud Run · Vercel · Render", "level": 80, "note": "" }
+        ]
+      }
+    ],
+    "toolTags": [
+      "FastAPI", "Next.js", "React Native", "LangGraph", "PostgreSQL", "FAISS",
+      "ChromaDB", "Paystack", "Nomba", "Firebase Auth", "Google Cloud Run",
+      "Groq", "OpenRouter", "Vercel", "Render", "Docker"
+    ]
+  },
+  "timeline": [
+    {
+      "year": "2026",
+      "title": "InnovateX Africa — Ecobank",
+      "subtitle": "Track B: Creative Economy",
+      "description": "Building Creator Genome, an AI-powered creator monetization platform using Ecobank’s Unified API as the payment and payout rail."
+    },
+    {
+      "year": "2026",
+      "title": "AI Academy Nigeria Pitchathon",
+      "subtitle": "Meta × Kuvora",
+      "description": "Pitching ZELTA’s AI Financial Twin concept for Nigerian university students, routing the LLM layer through Llama via Groq."
+    },
+    {
+      "year": "2026",
+      "title": "DSN × BCT LLM Agent Challenge",
+      "subtitle": "KudiWise AI",
+      "description": "Built and deployed an agentic LangGraph + FastAPI + ChromaDB assistant to Google Cloud Run, achieving Hit Rate@10 of 1.0."
+    },
+    {
+      "year": "2026",
+      "title": "Nomba Hackathon",
+      "subtitle": "OjaBulk",
+      "description": "Shipped pooled-procurement infrastructure for Nigerian market traders with a double-entry ledger and USSD access."
+    },
+    {
+      "year": "2025",
+      "title": "OPay Innovation Challenge",
+      "subtitle": "ZELTA v1",
+      "description": "First iteration of ZELTA — a behavioral finance platform using LangGraph, Gemini 1.5 Pro, and Kelly Criterion math."
+    },
+    {
+      "year": "2025",
+      "title": "GDG OAU — Build with AI",
+      "subtitle": "ZELTA",
+      "description": "Extended ZELTA’s behavioral finance engine, deployed on Google Cloud Run."
+    }
+  ]
+}

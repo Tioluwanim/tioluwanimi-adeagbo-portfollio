@@ -1,0 +1,16 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" fill="#08070C"/>
+  <rect x="120" y="96" width="960" height="528" rx="26" fill="url(#bg)" stroke="rgba(167,139,250,0.4)"/>
+  <rect x="200" y="190" width="180" height="280" rx="20" fill="rgba(167,139,250,0.2)"/>
+  <rect x="420" y="230" width="180" height="240" rx="20" fill="rgba(212,175,55,0.2)"/>
+  <rect x="640" y="280" width="180" height="190" rx="20" fill="rgba(167,139,250,0.16)"/>
+  <rect x="860" y="340" width="140" height="130" rx="20" fill="rgba(212,175,55,0.15)"/>
+  <rect x="180" y="156" width="390" height="42" rx="12" fill="rgba(167,139,250,0.2)"/>
+  <text x="180" y="126" fill="#DDD6FE" font-size="26" font-family="Inter, sans-serif">OjaBulk · Escrow Infrastructure</text>
+  <defs>
+    <linearGradient id="bg" x1="120" y1="96" x2="1080" y2="624" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#14111C"/>
+      <stop offset="1" stop-color="#0E0A17"/>
+    </linearGradient>
+  </defs>
+</svg>

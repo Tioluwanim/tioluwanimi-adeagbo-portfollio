@@ -1,0 +1,16 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" fill="#090909"/>
+  <rect x="120" y="96" width="960" height="528" rx="26" fill="url(#bg)" stroke="rgba(212,175,55,0.35)"/>
+  <rect x="180" y="156" width="320" height="42" rx="12" fill="rgba(255,215,0,0.18)"/>
+  <rect x="180" y="228" width="840" height="18" rx="9" fill="rgba(248,250,252,0.12)"/>
+  <rect x="180" y="266" width="690" height="18" rx="9" fill="rgba(248,250,252,0.09)"/>
+  <rect x="180" y="320" width="300" height="220" rx="18" fill="rgba(255,255,255,0.05)"/>
+  <rect x="510" y="320" width="510" height="220" rx="18" fill="rgba(255,255,255,0.03)"/>
+  <text x="180" y="126" fill="#FFD700" font-size="26" font-family="Inter, sans-serif">Spoudazõ · AI Exam Prep</text>
+  <defs>
+    <linearGradient id="bg" x1="120" y1="96" x2="1080" y2="624" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#141414"/>
+      <stop offset="1" stop-color="#0C0C0C"/>
+    </linearGradient>
+  </defs>
+</svg>

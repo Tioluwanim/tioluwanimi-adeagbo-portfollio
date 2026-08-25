@@ -1,8 +1,27 @@
 import './globals.css'
+import { Inter, JetBrains_Mono, Playfair_Display } from 'next/font/google'
 import SmoothScrollProvider from '../components/SmoothScrollProvider'
 import CustomCursor from '../components/CustomCursor'
 import FilmGrain from '../components/FilmGrain'
 import ChatWidget from '../components/ChatWidget'
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-body',
+  display: 'swap',
+})
+
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
+  display: 'swap',
+})
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-display',
+  display: 'swap',
+})
 
 export const metadata = {
   metadataBase: new URL('https://radet.me'),
@@ -49,7 +68,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${jetBrainsMono.variable} ${playfair.variable}`}>
       <body className="bg-void text-obsidian">
         <SmoothScrollProvider>
           <FilmGrain />
