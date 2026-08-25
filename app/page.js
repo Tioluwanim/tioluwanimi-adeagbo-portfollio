@@ -14,12 +14,13 @@ export default function Home() {
     <main className="relative">
       <Navbar />
       <Hero />
+      <div className="hero-scene-divider" aria-hidden />
       <About />
-      <Skills />
       <Projects />
       <Timeline />
-      <Learning />
+      <Skills />
       <Insights />
+      <Learning />
       <Contact />
       <Footer />
     </main>

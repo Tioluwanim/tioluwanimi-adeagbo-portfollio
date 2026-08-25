@@ -1,0 +1,17 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" fill="#070A09"/>
+  <rect x="120" y="96" width="960" height="528" rx="26" fill="url(#bg)" stroke="rgba(52,211,153,0.35)"/>
+  <circle cx="300" cy="360" r="130" fill="rgba(52,211,153,0.16)"/>
+  <circle cx="850" cy="280" r="80" fill="rgba(255,215,0,0.14)"/>
+  <circle cx="890" cy="430" r="120" fill="rgba(16,185,129,0.12)"/>
+  <rect x="180" y="156" width="300" height="42" rx="12" fill="rgba(52,211,153,0.22)"/>
+  <rect x="180" y="228" width="800" height="18" rx="9" fill="rgba(248,250,252,0.12)"/>
+  <rect x="180" y="266" width="650" height="18" rx="9" fill="rgba(248,250,252,0.09)"/>
+  <text x="180" y="126" fill="#A7F3D0" font-size="26" font-family="Inter, sans-serif">ZELTA · AI Financial Twin</text>
+  <defs>
+    <linearGradient id="bg" x1="120" y1="96" x2="1080" y2="624" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111614"/>
+      <stop offset="1" stop-color="#0A100E"/>
+    </linearGradient>
+  </defs>
+</svg>
